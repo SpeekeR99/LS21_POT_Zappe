@@ -1,0 +1,141 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.vects          0x00000000        0x4
+ *(.vects)
+ .vects         0x00000000        0x4 D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\vects.o
+                0x00000000                HardwareVectors
+
+.text           0x00000400      0x190
+ *(.text)
+ .text          0x00000400        0x0 D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\vects.o
+ .text          0x00000400      0x190 D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\main.o
+                0x00000400                start
+ *(.text.*)
+                0x00000590                etext = .
+
+.init
+ *(.init)
+
+.fini
+ *(.fini)
+
+.got
+ *(.got)
+ *(.got.plt)
+
+.rodata         0x00000590        0x0
+ *(.rodata)
+ *(.rodata.*)
+                0x00000590                _erodata = .
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.jcr
+ *(.jcr)
+
+.tors           0x00000590        0x0
+                0x00000590                __CTOR_LIST__ = .
+                0x00000590                ___ctors = .
+ *(.ctors)
+                0x00000590                ___ctors_end = .
+                0x00000590                __CTOR_END__ = .
+                0x00000590                __DTOR_LIST__ = .
+                0x00000590                ___dtors = .
+ *(.dtors)
+                0x00000590                ___dtors_end = .
+                0x00000590                __DTOR_END__ = .
+                0x00000590                _mdata = .
+
+.data           0x00ff4000       0xb0
+                0x00ff4000                _data = .
+ *(.data)
+ .data          0x00ff4000        0x0 D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\vects.o
+ .data          0x00ff4000       0xb0 D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\main.o
+ *(.data.*)
+                0x00ff40b0                _edata = .
+
+.gcc_exc
+ *(.gcc_exc)
+
+.bss            0x00ff40b0        0x0
+                0x00ff40b0                _bss = .
+ *(.bss)
+ .bss           0x00ff40b0        0x0 D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\vects.o
+ .bss           0x00ff40b0        0x0 D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\main.o
+ *(.bss.*)
+ *(COMMON)
+                0x00ff40b0                _ebss = .
+                0x00ff40b0                _end = .
+
+.stack          0x00ffc000        0x0
+                0x00ffc000                _stack = .
+LOAD D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\vects.o
+LOAD D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\main.o
+START GROUP
+LOAD d:\fav\1. prvák\letòák\pot\hew\tools\kpit cummins\gnuh8-elf\v11.02\h8300-elf\lib\gcc\h8300-elf\4.5-GNUH8_v11.02\h8300s\libgcc.a
+LOAD d:\fav\1. prvák\letòák\pot\hew\tools\kpit cummins\gnuh8-elf\v11.02\h8300-elf\h8300-elf\lib\h8300s\liboptc.a
+LOAD d:\fav\1. prvák\letòák\pot\hew\tools\kpit cummins\gnuh8-elf\v11.02\h8300-elf\h8300-elf\lib\h8300s\liboptm.a
+END GROUP
+OUTPUT(D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\Zappe_A20B0279P.x elf32-h8300)
+
+.debug_abbrev   0x00000000       0x78
+ .debug_abbrev  0x00000000       0x64 D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\vects.o
+ .debug_abbrev  0x00000064       0x14 D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\main.o
+
+.debug_info     0x00000000      0x118
+ .debug_info    0x00000000       0x62 D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\vects.o
+ .debug_info    0x00000062       0xb6 D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\main.o
+
+.debug_line     0x00000000      0x166
+ .debug_line    0x00000000       0x6a D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\vects.o
+ .debug_line    0x0000006a       0xfc D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\main.o
+
+.debug_pubnames
+                0x00000000       0x26
+ .debug_pubnames
+                0x00000000       0x26 D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\vects.o
+
+.debug_pubtypes
+                0x00000000       0x19
+ .debug_pubtypes
+                0x00000000       0x19 D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\vects.o
+
+.debug_str      0x00000000       0x7c
+ .debug_str     0x00000000       0x7c D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\vects.o
+
+.comment        0x00000000       0x1c
+ .comment       0x00000000       0x1c D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\vects.o
+                                 0x1d (size before relaxing)
+
+.debug_aranges  0x00000000       0x20
+ .debug_aranges
+                0x00000000       0x20 D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\main.o
+
+
+==============================================================
+
+Listfile generated by KPIT GNUH8 [ELF]-v11.02 on Wednesday, April 21, 2021, 11:10:49
+
+Build options:
+
+-T "D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\Zappe_A20B0279P_Debug_auto.gsi"
+-T "D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\Zappe_A20B0279P_input.tmp" 
+-L "d:\fav\1. prvák\letòák\pot\hew\tools\kpit cummins\gnuh8-elf\v11.02\h8300-elf\lib\gcc\h8300-elf\4.5-GNUH8_v11.02\h8300s"
+-L "d:\fav\1. prvák\letòák\pot\hew\tools\kpit cummins\gnuh8-elf\v11.02\h8300-elf\h8300-elf\lib\h8300s"
+-Map "D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\Zappe_A20B0279P.map"
+-( -l "gcc" -l "optc" -l "optm" -)
+-o "D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\Zappe_A20B0279P.x"
+-e _start
+INPUT("D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\vects.o")
+INPUT("D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\main.o")

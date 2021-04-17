@@ -1,0 +1,10 @@
+-c -x c
+-ms -ms2600
+-I "d:\fav\1. prvák\letòák\pot\hew\tools\kpit cummins\gnuh8-elf\v11.02\h8300-elf\h8300-elf\optlibinc"
+-I "d:\fav\1. prvák\letòák\pot\hew\tools\kpit cummins\gnuh8-elf\v11.02\h8300-elf\lib\gcc\h8300-elf\4.5-GNUH8_v11.02\optlibinc"
+-D DEBUG
+-nostdinc
+"D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\vects.c"
+-g
+-g2
+-o "D:\FAV\1. Prvák\Letòák\POT\Zappe_A20B0279P\Zappe_A20B0279P\Debug\vects.o"
